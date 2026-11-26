@@ -79,7 +79,7 @@ export default function Faq() {
                   <span
                     className={`grid h-9 w-9 shrink-0 place-items-center rounded-full transition duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-citrus-500 text-forest-950"
+                        ? "rotate-180 bg-citrus-500 text-white"
                         : "bg-forest-50 text-forest-900"
                     }`}
                   >

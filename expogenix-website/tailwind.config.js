@@ -9,9 +9,10 @@ export default {
       },
       colors: {
         /* Citrus & Forest palette */
-        cream: "#FFFAF5",
-        peach: "#FFDFC0",
-        apricot: "#F1AA6A",
+        cream: "#FFFCF8",
+        peach: "#FFE8CC",
+        apricot: "#F5B76E",
+        mint: "#E8F5EC",
         forest: {
           50: "#F3F8F3",
           100: "#E4EFE6",
@@ -42,9 +43,9 @@ export default {
         },
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(26, 65, 34, 0.06), 0 8px 24px -8px rgba(26, 65, 34, 0.12)",
-        lift: "0 2px 4px rgba(26, 65, 34, 0.06), 0 24px 48px -16px rgba(26, 65, 34, 0.25)",
-        cta: "0 10px 30px -10px rgba(247, 141, 6, 0.65)",
+        soft: "0 1px 2px rgba(68, 125, 82, 0.08), 0 8px 28px -8px rgba(68, 125, 82, 0.12)",
+        lift: "0 4px 14px -4px rgba(68, 125, 82, 0.1), 0 20px 40px -16px rgba(247, 141, 6, 0.12)",
+        cta: "0 8px 24px -8px rgba(247, 141, 6, 0.45)",
       },
       keyframes: {
         float: {

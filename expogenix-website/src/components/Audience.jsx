@@ -59,7 +59,7 @@ export default function Audience() {
               delay={i * 100}
               className={`relative flex flex-col overflow-hidden rounded-3xl p-8 transition duration-300 hover:-translate-y-1 sm:p-9 ${
                 featured
-                  ? "bg-forest-900 text-cream shadow-lift"
+                  ? "border-2 border-citrus-300 bg-gradient-to-br from-citrus-50 via-white to-mint/80 shadow-lift"
                   : "border border-forest-900/[0.08] bg-white shadow-soft hover:shadow-lift"
               }`}
             >
@@ -72,27 +72,27 @@ export default function Audience() {
               <div className="relative flex items-center justify-between">
                 <span
                   className={`grid h-14 w-14 place-items-center rounded-2xl ${
-                    featured ? "bg-citrus-500 text-forest-950" : "bg-peach/70 text-citrus-700"
+                    featured ? "bg-citrus-500 text-white" : "bg-peach/70 text-citrus-700"
                   }`}
                 >
                   <Icon size={24} />
                 </span>
                 <span
                   className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                    featured ? "bg-cream/10 text-peach" : "bg-forest-50 text-forest-700"
+                    featured ? "bg-citrus-100 text-citrus-800" : "bg-forest-50 text-forest-700"
                   }`}
                 >
                   {tag}
                 </span>
               </div>
-              <h3 className={`relative mt-7 text-2xl font-bold ${featured ? "!text-cream" : ""}`}>
+              <h3 className="relative mt-7 text-2xl font-bold text-forest-800">
                 {name}
               </h3>
               <ul className="relative mt-6 flex-1 space-y-3.5">
                 {points.map((p) => (
                   <li
                     key={p}
-                    className={`flex gap-3 text-[0.95rem] ${featured ? "text-cream/85" : "text-ink-700"}`}
+                    className="flex gap-3 text-[0.95rem] text-ink-700"
                   >
                     <Check
                       size={18}

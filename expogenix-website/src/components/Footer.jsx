@@ -31,23 +31,23 @@ const COLUMNS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-forest-950 text-cream/60">
+    <footer className="border-t border-forest-200/60 bg-mint text-ink-500">
       <div className="container-x py-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <p className="font-display text-2xl font-bold text-cream">{SITE.name}</p>
+            <p className="font-display text-2xl font-bold text-forest-800">{SITE.name}</p>
             <p className="mt-4 max-w-sm leading-relaxed">
               The smart exhibition portal for live stall booking, online payments, GST
               invoicing, sponsorships and visitor e-tickets.
             </p>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-citrus-400">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-citrus-600">
               {SITE.tagline}
             </p>
           </div>
 
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <p className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-cream">
+              <p className="font-display text-sm font-semibold uppercase tracking-[0.16em] text-forest-800">
                 {col.title}
               </p>
               <ul className="mt-5 space-y-3">
@@ -56,7 +56,7 @@ export default function Footer() {
                     <a
                       href={l.href}
                       {...(l.external ? { target: "_blank", rel: "noreferrer" } : {})}
-                      className="inline-flex items-center gap-1 transition hover:text-citrus-400"
+                      className="inline-flex items-center gap-1 transition hover:text-citrus-600"
                     >
                       {l.label}
                       {l.external && <ArrowUpRight size={14} className="opacity-60" />}
@@ -68,12 +68,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-8 text-sm md:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-forest-200/80 pt-8 text-sm md:flex-row">
           <p>
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2" aria-label="Legal">
-            <a href="#privacy" className="transition hover:text-citrus-400">
+            <a href="#privacy" className="transition hover:text-citrus-600">
               Privacy policy
             </a>
           </nav>
@@ -83,7 +83,7 @@ export default function Footer() {
               href={SITE.companyUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-bold text-cream underline decoration-citrus-400/80 underline-offset-4 transition hover:text-citrus-400"
+              className="font-bold text-forest-800 underline decoration-citrus-500/80 underline-offset-4 transition hover:text-citrus-600"
             >
               DatagenixAi
             </a>

@@ -54,22 +54,22 @@ export default function About() {
 
           <Reveal
             delay={120}
-            className="glow-forest relative overflow-hidden rounded-3xl bg-forest-900 p-8 sm:p-10"
+            className="glow-citrus relative overflow-hidden rounded-3xl border border-citrus-200 bg-white p-8 sm:p-10"
           >
             <div
-              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-citrus-500/25 blur-3xl"
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-citrus-200/50 blur-3xl"
               aria-hidden
             />
-            <p className="relative text-xs font-semibold uppercase tracking-[0.16em] text-citrus-300">
+            <p className="relative text-xs font-semibold uppercase tracking-[0.16em] text-citrus-600">
               The {SITE.name} way
             </p>
-            <p className="relative mt-2 font-display text-2xl font-bold text-cream">
+            <p className="relative mt-2 font-display text-2xl font-bold text-forest-800">
               With {SITE.name}
             </p>
             <ul className="relative mt-7 space-y-4">
               {AFTER.map((t) => (
-                <li key={t} className="flex gap-3.5 text-base font-medium text-cream/90 sm:text-lg">
-                  <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-citrus-500 text-forest-950">
+                <li key={t} className="flex gap-3.5 text-base font-medium text-ink-700 sm:text-lg">
+                  <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-citrus-500 text-white">
                     <Check size={15} strokeWidth={3} />
                   </span>
                   {t}

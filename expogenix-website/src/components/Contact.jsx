@@ -77,18 +77,17 @@ export default function Contact() {
   const err = "mt-1.5 text-xs text-red-600";
 
   return (
-    <section id="contact" className="section-y relative overflow-hidden bg-forest-900">
-      <div className="hero-grid pointer-events-none absolute inset-0 opacity-60" aria-hidden />
+    <section id="contact" className="section-y relative overflow-hidden bg-white">
       <div
-        className="pointer-events-none absolute -right-32 top-0 h-[30rem] w-[30rem] rounded-full bg-citrus-500/15 blur-[120px]"
+        className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-citrus-100/80 blur-[100px]"
         aria-hidden
       />
 
       <div className="container-x relative grid gap-10 lg:grid-cols-5">
-        <Reveal className="text-cream lg:col-span-2">
-          <span className="eyebrow-dark">Contact us</span>
-          <h2 className="section-title !text-cream">Let's power your next exhibition</h2>
-          <p className="mt-5 text-lg leading-relaxed text-cream/65">
+        <Reveal className="lg:col-span-2">
+          <span className="eyebrow">Contact us</span>
+          <h2 className="section-title">Let's power your next exhibition</h2>
+          <p className="mt-5 text-lg leading-relaxed text-ink-500">
             Want to run your exhibition on {SITE.name}, or need help with a booking? Send
             us an enquiry and we'll get back to you shortly.
           </p>
@@ -101,19 +100,19 @@ export default function Contact() {
             ].map(({ icon: Icon, label: l, value, href }) => (
               <li
                 key={l}
-                className="flex items-center gap-4 rounded-2xl border border-cream/10 bg-cream/[0.03] p-4"
+                className="flex items-center gap-4 rounded-2xl border border-forest-200/80 bg-mint/50 p-4"
               >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-citrus-500 text-forest-950">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-citrus-500 text-white">
                   <Icon size={20} />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.14em] text-cream/50">{l}</p>
+                  <p className="text-xs uppercase tracking-[0.14em] text-ink-500">{l}</p>
                   {href ? (
-                    <a href={href} className="font-medium text-cream transition hover:text-citrus-400">
+                    <a href={href} className="font-medium text-forest-800 transition hover:text-citrus-600">
                       {value}
                     </a>
                   ) : (
-                    <p className="font-medium text-cream">{value}</p>
+                    <p className="font-medium text-forest-800">{value}</p>
                   )}
                 </div>
               </li>

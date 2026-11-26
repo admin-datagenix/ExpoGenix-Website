@@ -71,7 +71,7 @@ export default function Features() {
               delay={(i % 4) * 80}
               className="group relative overflow-hidden rounded-3xl border border-forest-900/[0.08] bg-cream p-6 transition duration-300 hover:-translate-y-1 hover:border-citrus-300 hover:bg-white hover:shadow-lift sm:p-7"
             >
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-forest-900 text-citrus-400 transition duration-300 group-hover:bg-citrus-500 group-hover:text-forest-950">
+              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-forest-100 text-citrus-700 transition duration-300 group-hover:bg-citrus-500 group-hover:text-white">
                 <Icon size={22} />
               </span>
               <h3 className="mt-5 text-xl font-bold leading-snug">{title}</h3>

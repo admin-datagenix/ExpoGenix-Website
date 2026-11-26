@@ -39,8 +39,8 @@ function TicketDemo() {
             aria-pressed={day === i}
             className={`rounded-xl border px-2 py-2.5 text-center transition ${
               day === i
-                ? "border-forest-900 bg-forest-900 text-cream"
-                : "border-forest-900/10 bg-white text-forest-900 hover:border-forest-900/30"
+                ? "border-citrus-500 bg-citrus-500 text-white"
+                : "border-forest-200 bg-white text-forest-800 hover:border-citrus-300"
             }`}
           >
             <span className="block text-xs opacity-70">{d}</span>
@@ -71,7 +71,7 @@ function TicketDemo() {
                 type="button"
                 onClick={() => change(t.key, 1)}
                 aria-label={`Add one ${t.label} ticket`}
-                className="grid h-8 w-8 place-items-center rounded-full bg-forest-900 text-cream transition hover:bg-forest-800"
+                className="grid h-8 w-8 place-items-center rounded-full bg-citrus-500 text-white transition hover:bg-citrus-400"
               >
                 <Plus size={14} />
               </button>
@@ -104,7 +104,7 @@ export default function Tickets() {
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
           <Reveal className="card p-8 sm:p-10">
             <div className="flex items-center gap-4">
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-forest-900 text-citrus-400">
+              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-forest-100 text-citrus-700">
                 <QrCode size={26} />
               </span>
               <div>
@@ -124,19 +124,19 @@ export default function Tickets() {
 
           <Reveal
             delay={120}
-            className="relative flex flex-col overflow-hidden rounded-3xl bg-forest-900 p-8 text-cream shadow-lift sm:p-10"
+            className="glow-citrus relative flex flex-col overflow-hidden rounded-3xl border border-citrus-200 bg-white p-8 shadow-lift sm:p-10"
           >
             <div
-              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-citrus-500/25 blur-3xl"
+              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-citrus-200/40 blur-3xl"
               aria-hidden
             />
             <div className="relative flex items-center gap-4">
-              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-citrus-500 text-forest-950">
+              <span className="grid h-14 w-14 place-items-center rounded-2xl bg-citrus-500 text-white">
                 <Award size={26} />
               </span>
               <div>
-                <h3 className="text-2xl font-bold !text-cream">Sponsorship packages</h3>
-                <p className="text-cream/60">Limited slots per tier, availability updates live</p>
+                <h3 className="text-2xl font-bold text-forest-800">Sponsorship packages</h3>
+                <p className="text-ink-500">Limited slots per tier, availability updates live</p>
               </div>
             </div>
 
@@ -145,20 +145,20 @@ export default function Tickets() {
                 <li
                   key={t.name}
                   className={`rounded-2xl border p-5 ${
-                    i === 0 ? "border-citrus-500/50 bg-citrus-500/10" : "border-cream/10 bg-cream/[0.04]"
+                    i === 0 ? "border-citrus-300 bg-citrus-50" : "border-forest-200 bg-mint/40"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <p className="flex items-center gap-2 font-display text-lg font-bold">
-                      {i === 0 && <Sparkles size={16} className="text-citrus-400" />}
+                    <p className="flex items-center gap-2 font-display text-lg font-bold text-forest-800">
+                      {i === 0 && <Sparkles size={16} className="text-citrus-600" />}
                       {t.name}
                     </p>
-                    <span className="text-xs font-semibold text-peach">
+                    <span className="text-xs font-semibold text-citrus-700">
                       {t.left} of {t.total} slots left
                     </span>
                   </div>
-                  <p className="mt-1 text-sm text-cream/60">{t.perks}</p>
-                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-cream/10">
+                  <p className="mt-1 text-sm text-ink-500">{t.perks}</p>
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-forest-100">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-citrus-500 to-apricot"
                       style={{ width: `${((t.total - t.left) / t.total) * 100 || 6}%` }}
@@ -168,7 +168,7 @@ export default function Tickets() {
               ))}
             </ul>
 
-            <p className="relative mt-5 text-xs text-cream/40">
+            <p className="relative mt-5 text-xs text-ink-500">
               Example tiers — each organizer sets their own packages and pricing.
             </p>
 

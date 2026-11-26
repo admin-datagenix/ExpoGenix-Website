@@ -11,22 +11,22 @@ const MAP = [
 const STALL_STYLE = {
   a: "border-forest-400/60 bg-forest-100 text-forest-800",
   h: "border-apricot bg-peach text-citrus-700",
-  b: "border-forest-900 bg-forest-900 text-cream/70",
-  s: "border-citrus-600 bg-citrus-500 text-forest-950 ring-4 ring-citrus-500/25",
+  b: "border-forest-300 bg-forest-200 text-forest-700",
+  s: "border-citrus-500 bg-citrus-400 text-white ring-4 ring-citrus-400/30",
 };
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-forest-900 pb-16 pt-24 text-cream sm:pb-20 sm:pt-28"
+      className="section-warm relative overflow-hidden pb-16 pt-24 sm:pb-20 sm:pt-28"
     >
       <div
-        className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-citrus-500/20 blur-[120px]"
+        className="pointer-events-none absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-citrus-200/50 blur-[100px]"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -bottom-40 -left-40 h-[28rem] w-[28rem] rounded-full bg-forest-400/25 blur-[120px]"
+        className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-forest-200/60 blur-[100px]"
         aria-hidden
       />
 
@@ -37,14 +37,14 @@ export default function Hero() {
             Live stall availability · Secure online payment
           </span>
 
-          <h1 className="mt-5 text-[2.25rem] font-bold leading-[1.08] !text-cream sm:text-5xl lg:text-[3.25rem]">
+          <h1 className="mt-5 text-[2.25rem] font-bold leading-[1.08] text-forest-800 sm:text-5xl lg:text-[3.25rem]">
             Book your exhibition stall{" "}
-            <span className="bg-gradient-to-r from-citrus-400 via-citrus-300 to-peach bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-citrus-600 via-citrus-500 to-citrus-400 bg-clip-text text-transparent">
               in minutes.
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/70 sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-700 sm:text-lg">
             {SITE.name} is the all-in-one exhibition portal: pick a stall on the live
             floor plan, add a sponsorship package, pay online and get your
             confirmation and GST invoice instantly.
@@ -59,7 +59,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <ul className="mt-8 grid max-w-lg grid-cols-1 gap-2.5 text-sm text-cream/75 sm:grid-cols-2">
+          <ul className="mt-8 grid max-w-lg grid-cols-1 gap-2.5 text-sm text-ink-700 sm:grid-cols-2">
             {[
               "Live floor plan, real-time status",
               "UPI, cards & net banking",
@@ -79,7 +79,7 @@ export default function Hero() {
         <div className="relative mx-auto w-full max-w-xl animate-fade-up [animation-delay:150ms]">
           <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-citrus-500/30 to-forest-400/10 blur-2xl" aria-hidden />
 
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-cream/10 bg-cream text-ink-700 shadow-lift">
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-forest-200/80 bg-white text-ink-700 shadow-lift">
             <div className="flex items-center gap-2 border-b border-forest-900/[0.08] bg-white px-5 py-3.5">
               <span className="h-3 w-3 rounded-full bg-citrus-300" />
               <span className="h-3 w-3 rounded-full bg-peach" />
@@ -124,7 +124,7 @@ export default function Hero() {
                   {[
                     ["bg-forest-100 border-forest-400/60", "Available"],
                     ["bg-peach border-apricot", "On hold"],
-                    ["bg-forest-900 border-forest-900", "Booked"],
+                    ["bg-forest-200 border-forest-300", "Booked"],
                     ["bg-citrus-500 border-citrus-600", "Your pick"],
                   ].map(([c, l]) => (
                     <span key={l} className="flex items-center gap-1.5">
@@ -135,12 +135,14 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-between rounded-2xl bg-forest-900 p-4 text-cream">
+              <div className="mt-4 flex items-center justify-between rounded-2xl border border-forest-200 bg-forest-50 p-4">
                 <div>
-                  <p className="text-xs text-cream/60">Stall B4 · 3 × 3 m · Corner</p>
-                  <p className="mt-0.5 font-display text-lg font-bold">₹ 24,000 <span className="text-xs font-medium text-cream/60">+ GST</span></p>
+                  <p className="text-xs text-ink-500">Stall B4 · 3 × 3 m · Corner</p>
+                  <p className="mt-0.5 font-display text-lg font-bold text-forest-800">
+                    ₹ 24,000 <span className="text-xs font-medium text-ink-500">+ GST</span>
+                  </p>
                 </div>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-citrus-500 px-4 py-2 text-xs font-bold text-forest-950">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-citrus-500 px-4 py-2 text-xs font-bold text-white">
                   <Timer size={14} /> Held 14:52
                 </span>
               </div>

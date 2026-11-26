@@ -14,13 +14,13 @@
   h2,
   h3,
   h4 {
-    @apply font-display tracking-tight text-forest-900;
+    @apply font-display tracking-tight text-forest-800;
   }
   section[id] {
     scroll-margin-top: 5.5rem;
   }
   ::selection {
-    @apply bg-citrus-500 text-forest-950;
+    @apply bg-citrus-200 text-forest-800;
   }
 }
 
@@ -33,26 +33,26 @@
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.95rem] font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .btn-primary {
-    @apply btn bg-citrus-500 text-forest-950 shadow-cta hover:-translate-y-0.5 hover:bg-citrus-400 focus-visible:ring-citrus-500 focus-visible:ring-offset-cream;
+    @apply btn bg-citrus-500 text-white shadow-cta hover:-translate-y-0.5 hover:bg-citrus-400 focus-visible:ring-citrus-500 focus-visible:ring-offset-cream;
   }
   .btn-dark {
-    @apply btn bg-forest-900 text-cream shadow-soft hover:-translate-y-0.5 hover:bg-forest-800 focus-visible:ring-forest-900 focus-visible:ring-offset-cream;
+    @apply btn bg-forest-600 text-white shadow-soft hover:-translate-y-0.5 hover:bg-forest-500 focus-visible:ring-forest-500 focus-visible:ring-offset-cream;
   }
   .btn-outline {
-    @apply btn border border-forest-900/15 bg-white text-forest-900 hover:border-forest-900/30 hover:bg-forest-50 focus-visible:ring-forest-900;
+    @apply btn border border-forest-300/80 bg-white text-forest-700 hover:border-citrus-400 hover:bg-citrus-50 focus-visible:ring-citrus-400;
   }
   .btn-ghost-light {
-    @apply btn border border-cream/25 text-cream hover:border-cream/50 hover:bg-cream/10 focus-visible:ring-cream focus-visible:ring-offset-forest-900;
+    @apply btn-outline;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-citrus-300/60 bg-citrus-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-citrus-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-citrus-200 bg-citrus-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-citrus-700;
   }
   .eyebrow-dark {
-    @apply inline-flex items-center gap-2 rounded-full border border-cream/15 bg-cream/5 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-peach;
+    @apply eyebrow;
   }
   .section-title {
-    @apply mt-4 text-[2.1rem] font-bold leading-[1.1] sm:text-[2.6rem] lg:text-5xl;
+    @apply mt-4 text-[2.1rem] font-bold leading-[1.1] text-forest-800 sm:text-[2.6rem] lg:text-5xl;
   }
   .section-sub {
     @apply mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-ink-500;
@@ -60,28 +60,25 @@
   .section-y {
     @apply py-14 sm:py-16;
   }
+  .section-soft {
+    background-color: color-mix(in srgb, #e8f5ec 85%, #fffcf8);
+  }
+  .section-warm {
+    @apply bg-gradient-to-br from-citrus-50/80 via-cream to-peach/40;
+  }
   .card {
-    @apply rounded-3xl border border-forest-900/[0.08] bg-white shadow-soft;
+    @apply rounded-3xl border border-forest-200/80 bg-white shadow-soft;
   }
 
   .glow-soft {
     box-shadow:
-      0 0 0 1px rgba(26, 65, 34, 0.06),
-      0 12px 40px -16px rgba(247, 141, 6, 0.22),
-      0 0 56px -20px rgba(247, 141, 6, 0.18);
+      0 0 0 1px rgba(157, 195, 165, 0.35),
+      0 12px 36px -14px rgba(247, 141, 6, 0.18);
   }
   .glow-forest {
     box-shadow:
-      0 0 0 1px rgba(255, 250, 245, 0.12),
-      0 16px 48px -12px rgba(247, 141, 6, 0.4),
-      0 0 72px -8px rgba(247, 141, 6, 0.28);
-  }
-
-  .hero-grid {
-    background-image: linear-gradient(rgba(255, 250, 245, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 250, 245, 0.05) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 40%, transparent 100%);
+      0 0 0 1px rgba(200, 223, 204, 0.9),
+      0 16px 40px -12px rgba(247, 141, 6, 0.2);
   }
 
   .reveal {
