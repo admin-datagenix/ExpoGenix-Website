@@ -1,7 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { SITE } from "../config.js";
-import { ExpoGenixLogo } from "./BrandName.jsx";
-
 const COLUMNS = [
   {
     title: "Product",
@@ -37,10 +35,8 @@ export default function Footer() {
       <div className="container-x py-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <a href="#top" className="inline-flex items-center rounded-lg bg-white/95 px-2.5 py-2">
-              <ExpoGenixLogo size="md" />
-            </a>
-            <p className="mt-5 max-w-sm leading-relaxed">
+            <p className="font-display text-2xl font-bold text-cream">{SITE.name}</p>
+            <p className="mt-4 max-w-sm leading-relaxed">
               The smart exhibition portal for live stall booking, online payments, GST
               invoicing, sponsorships and visitor e-tickets.
             </p>
