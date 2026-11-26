@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { SITE } from "../config.js";
-import BrandName, { BrandMark } from "./BrandName.jsx";
+import { ExpoGenixLogo } from "./BrandName.jsx";
 
 const COLUMNS = [
   {
@@ -37,9 +37,8 @@ export default function Footer() {
       <div className="container-x py-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <a href="#top" className="inline-flex items-center gap-2.5">
-              <BrandMark />
-              <BrandName onDark size="sm" />
+            <a href="#top" className="inline-flex items-center rounded-lg bg-white/95 px-2.5 py-2">
+              <ExpoGenixLogo size="md" />
             </a>
             <p className="mt-5 max-w-sm leading-relaxed">
               The smart exhibition portal for live stall booking, online payments, GST
@@ -83,14 +82,14 @@ export default function Footer() {
             </a>
           </nav>
           <p>
-            A product by{" "}
+            Designed &amp; Developed By{" "}
             <a
               href={SITE.companyUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-cream transition hover:text-citrus-400"
+              className="font-bold text-cream underline decoration-citrus-400/80 underline-offset-4 transition hover:text-citrus-400"
             >
-              {SITE.company}
+              DatagenixAi
             </a>
           </p>
         </div>

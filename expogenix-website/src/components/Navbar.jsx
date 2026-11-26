@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { SITE } from "../config.js";
-import BrandName, { BrandMark } from "./BrandName.jsx";
+import { ExpoGenixLogo } from "./BrandName.jsx";
 
 const LINKS = [
   { href: "#features", label: "Features" },
@@ -29,10 +29,9 @@ export default function Navbar() {
         scrolled || open ? "shadow-soft" : ""
       }`}
     >
-      <div className="container-x flex h-[4.5rem] items-center justify-between gap-4 lg:gap-6">
-        <a href="#top" className="flex items-center gap-2.5" aria-label={`${SITE.name} home`}>
-          <BrandMark />
-          <BrandName size="sm" />
+      <div className="container-x flex h-16 items-center justify-between gap-4 sm:h-[4.75rem] lg:gap-6">
+        <a href="#top" className="flex items-center py-1" aria-label={`${SITE.name} home`}>
+          <ExpoGenixLogo size="md" />
         </a>
 
         <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main">

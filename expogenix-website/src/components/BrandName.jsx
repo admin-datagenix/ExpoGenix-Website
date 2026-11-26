@@ -1,30 +1,33 @@
-export function BrandMark({ className = "h-9 w-9" }) {
+export const LOGO_SRC = "/expogenix-logo.png?v=2";
+
+const LOGO_HEIGHT = {
+  xs: "h-10 max-w-[12rem]",
+  sm: "h-11 max-w-[14rem] sm:h-12 sm:max-w-[16rem]",
+  md: "h-12 max-w-[16rem] sm:h-[3.5rem] sm:max-w-[19rem]",
+  lg: "h-16 max-w-[20rem] sm:h-[4.25rem] sm:max-w-[22rem]",
+};
+
+/** Full ExpoGenix brand mark (official logo image). */
+export function ExpoGenixLogo({ size = "sm", className = "" }) {
   return (
-    <span
-      className={`grid shrink-0 place-items-center rounded-xl bg-gradient-to-br from-citrus-400 to-citrus-600 shadow-cta ${className}`}
-      aria-hidden
-    >
-      <svg viewBox="0 0 24 24" className="h-[55%] w-[55%]" fill="none">
-        <rect x="3" y="3" width="7.5" height="7.5" rx="2" fill="#1A4122" />
-        <rect x="13.5" y="3" width="7.5" height="7.5" rx="2" fill="#FFFAF5" />
-        <rect x="3" y="13.5" width="7.5" height="7.5" rx="2" fill="#FFFAF5" />
-        <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" fill="#1A4122" />
-      </svg>
-    </span>
+    <img
+      src={LOGO_SRC}
+      alt="ExpoGenix — Exhibitions, Events, Experiences"
+      className={`w-auto shrink-0 object-contain object-left ${LOGO_HEIGHT[size] ?? LOGO_HEIGHT.sm} ${className}`}
+      width={320}
+      height={80}
+      decoding="async"
+    />
   );
 }
 
-export default function BrandName({ onDark = false, size = "md" }) {
-  const sizes = {
-    sm: "text-xl",
-    md: "text-2xl",
-    lg: "text-3xl",
-  };
+/** @deprecated Use ExpoGenixLogo — kept for imports that still reference BrandMark. */
+export function BrandMark({ className = "" }) {
+  return <ExpoGenixLogo size="xs" className={className} />;
+}
 
-  return (
-    <span className={`font-display font-bold tracking-tight ${sizes[size] ?? sizes.md}`}>
-      <span className={onDark ? "text-cream" : "text-forest-900"}>Expo</span>
-      <span className="text-citrus-500">Genix</span>
-    </span>
-  );
+export default function BrandName({ onDark = false, size = "md" }) {
+  void onDark;
+  const map = { sm: "sm", md: "md", lg: "lg" };
+  return <ExpoGenixLogo size={map[size] ?? "md"} />;
 }

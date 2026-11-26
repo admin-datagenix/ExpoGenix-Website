@@ -17,7 +17,7 @@
     @apply font-display tracking-tight text-forest-900;
   }
   section[id] {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 5.5rem;
   }
   ::selection {
     @apply bg-citrus-500 text-forest-950;

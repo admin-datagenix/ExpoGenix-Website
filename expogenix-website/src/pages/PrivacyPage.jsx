@@ -1,6 +1,6 @@
 import { ArrowLeft, Shield } from "lucide-react";
 import { SITE } from "../config.js";
-import BrandName, { BrandMark } from "../components/BrandName.jsx";
+import { ExpoGenixLogo } from "../components/BrandName.jsx";
 
 const SECTIONS = [
   {
@@ -57,9 +57,8 @@ export default function PrivacyPage() {
             <ArrowLeft size={18} />
             Back to home
           </a>
-          <a href="#top" onClick={goHome} className="flex items-center gap-2" aria-label={`${SITE.name} home`}>
-            <BrandMark className="h-8 w-8" />
-            <BrandName size="sm" />
+          <a href="#top" onClick={goHome} className="flex items-center" aria-label={`${SITE.name} home`}>
+            <ExpoGenixLogo size="sm" />
           </a>
           <span className="hidden items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-ink-500 sm:inline-flex">
             <Shield size={16} className="text-citrus-600" />
